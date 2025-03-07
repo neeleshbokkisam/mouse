@@ -18,7 +18,7 @@ class MouseController:
         if index_tip is None:
             return
         
-        x = np.interp(index_tip[0], [0, self.screen_width], [0, self.screen_width])
+        x = np.interp(index_tip[0], [0, self.screen_width], [self.screen_width, 0])
         y = np.interp(index_tip[1], [0, self.screen_height], [0, self.screen_height])
         
         # Apply smoothing
