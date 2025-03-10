@@ -30,10 +30,10 @@ while cap.isOpened():
         if fingers["index_tip"]:
             controller.move_cursor(fingers["index_tip"])
         
-        if detector.detect_click(fingers["index_tip"], fingers["thumb_tip"]):
+        if detector.detect_click(fingers["middle_tip"], fingers["thumb_tip"]):
             controller.click()
         
-        if detector.detect_drag(fingers["index_tip"], fingers["thumb_tip"], prev_distance=None):
+        if detector.detect_drag(fingers["middle_tip"], fingers["thumb_tip"], prev_distance=None):
             controller.drag(fingers["index_tip"])
     
     cv2.imshow("Mouse Control", frame)
